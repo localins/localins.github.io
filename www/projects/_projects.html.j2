@@ -20,11 +20,13 @@
         {% for project in category.projects %}
             <div class="project"><!--
                 --><div class="project-cover"><!--
-                    -->{% if project.image %}<!--
-                        --><img src="/projects/assets/{{ project.image }}.png" alt="{{ project.name }}" /><!--
-                    -->{% else %}<!--
-                        --><img src="/assets/broken.png" alt="{{ project.name }}" /><!--
-                    -->{% endif %}<!--
+                    -->{% if project.url %}<a href="{{ project.url }}">{% endif %}<!--
+                        -->{% if project.image %}<!--
+                            --><img src="/projects/assets/{{ project.image }}.png" alt="{{ project.name }}" /><!--
+                        -->{% else %}<!--
+                            --><img src="/assets/broken.png" alt="{{ project.name }}" /><!--
+                        -->{% endif %}<!--
+                    -->{% if project.url %}</a>{% endif %}<!--
                 --></div><!--
 
                 --><div class="project-text"><!--
