@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     set("links-email", "Email (me@cantsleep.cc)");
-    set("links-github", "GitHub (LocalInsomniac)");
+    set("links-github", "GitHub (localins)");
     set("links-discord", "Discord (cant_sleep)");
-    set("links-twitter", "Twitter (@_LocalInsomniac)");
+    set("links-twitter", "Twitter (@localins)");
 });
