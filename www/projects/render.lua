@@ -49,7 +49,7 @@ render("projects/_projects.html", "projects/index.html", {
             url = "https://steamcommunity.com/sharedfiles/filedetails/?id=3660032479",
             image = "pointy",
             description = "A resource pack that replaces NPC portraits with hand-drawn ones, excluding pets.",
-            tags = {"respack", "wip"}
+            tags = {"respack"}
         }, {
             id = "wolf2wad",
             name = "wolf2wad",
