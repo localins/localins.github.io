@@ -13,33 +13,6 @@ render("projects/_projects.html", "projects/index.html", {
             tags = {"wip", "game"}
         }}
     }, {
-        category = "tech",
-
-        projects = {{
-            id = "caulk",
-            name = "caulk",
-            alt = "Schwungus, 2025",
-            url = "https://github.com/Schwungus/caulk",
-            image = "caulk",
-            description = "Convenient Steamworks API wrapper for plain C, since there weren't any left. Supports Steamworks SDK 1.62.",
-            footer = {"In collaboration with <a href=\"https://nonk.dev\">nonk</a>"},
-            tags = {"library"}
-        }},
-
-        misc = {{
-            name = "S_fixed",
-            alt = "Schwungus, 2025",
-            url = "https://github.com/Schwungus/S_fixed",
-            description = "Q16.16 fixed-point math library for C",
-            tags = {"library"}
-        }, {
-            name = "PNEngine",
-            alt = "Schwungus, 2022",
-            url = "https://github.com/Schwungus/PNEngine",
-            description = "Customizable 3D engine for GameMaker",
-            tags = {"engine"}
-        }}
-    }, {
         category = "fanmade",
 
         projects = {{
@@ -93,6 +66,33 @@ render("projects/_projects.html", "projects/index.html", {
             url = "https://github.com/LocalInsomniac/FrameMe",
             description = "Universal freezecam mod for GZDoom",
             tags = {"mod"}
+        }}
+    }, {
+        category = "tech",
+
+        projects = {{
+            id = "caulk",
+            name = "caulk",
+            alt = "Schwungus, 2025",
+            url = "https://github.com/Schwungus/caulk",
+            image = "caulk",
+            description = "Convenient Steamworks API wrapper for plain C, since there weren't any left. Supports Steamworks SDK 1.62.",
+            footer = {"In collaboration with <a href=\"https://nonk.dev\">nonk</a>"},
+            tags = {"library"}
+        }},
+
+        misc = {{
+            name = "S_fixed",
+            alt = "Schwungus, 2025",
+            url = "https://github.com/Schwungus/S_fixed",
+            description = "Q16.16 fixed-point math library for C",
+            tags = {"library"}
+        }, {
+            name = "PNEngine",
+            alt = "Schwungus, 2022",
+            url = "https://github.com/Schwungus/PNEngine",
+            description = "Customizable 3D engine for GameMaker",
+            tags = {"engine"}
         }}
     }},
 
