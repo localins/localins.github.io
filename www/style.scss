@@ -97,7 +97,7 @@ body {
         user-select: none;
 
         span {
-            opacity: 50%;
+            opacity: 0.5;
         }
 
         img {
@@ -192,7 +192,7 @@ h2 {
 }
 
 #links-description {
-    opacity: 50%;
+    opacity: 0.5;
     user-select: text;
 }
 
@@ -212,64 +212,7 @@ h2 {
     &-right {
         text-align: left;
 
-        opacity: 75%;
-    }
-}
-
-#status {
-    height: fit-content;
-    margin: 1em auto 2em auto;
-
-    display: none;
-    align-items: center;
-    justify-content: center;
-
-    & > *:not(:first-child) {
-        margin-left: -1em;
-    }
-
-    &cafe {
-        width: fit-content;
-        max-width: 240px;
-        padding: 0.5em 1em;
-
-        color: #232629;
-        background: white;
-
-        border-radius: 24px;
-        overflow: hidden;
-        text-align: center;
-
-        &-username {
-            font-size: 80%;
-            margin-bottom: 0.25em;
-        }
-    }
-
-    &-head {
-        z-index: 1;
-
-        cursor: help;
-    }
-
-    img[src="/assets/heads/hunk.png"] {
-        width: 9%;
-        transform: translateX(-2px);
-    }
-
-    img[src="/assets/heads/junktroop.png"] {
-        width: 12%;
-        transform: translate(2px, -10px);
-    }
-
-    img[src="/assets/heads/burge.png"] {
-        width: 16%;
-        transform: translateY(-8px);
-    }
-
-    img[src="/assets/heads/video.png"] {
-        width: 15%;
-        transform: translate(2px, -8px);
+        opacity: 0.75;
     }
 }
 
@@ -330,5 +273,12 @@ h2 {
     & > p {
         text-align: center;
         word-wrap: break-word;
+
+        img {
+            margin-left: 0.25em;
+            vertical-align: middle;
+
+            opacity: 0.6;
+        }
     }
 }
