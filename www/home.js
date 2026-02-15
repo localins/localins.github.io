@@ -19,4 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
     set("links-github", "GitHub (localins)");
     set("links-discord", "Discord (cant_sleep)");
     set("links-twitter", "Twitter (@localins)");
+    set("links-newgrounds", "Newgrounds (LocalInsomniac)");
 });

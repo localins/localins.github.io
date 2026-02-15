@@ -204,6 +204,16 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 1em;
+
+    &-left {
+        text-align: right;
+    }
+
+    &-right {
+        text-align: left;
+
+        opacity: 75%;
+    }
 }
 
 #status {

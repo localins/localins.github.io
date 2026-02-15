@@ -8,7 +8,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Mightcer, 2025",
             url = "https://store.steampowered.com/app/3719890",
             image = "dcb",
-            description = "Casual game with tons of short levels and a high skill ceiling. Dash and concuss your way to the end of each level as quickly as you can.",
+            description = "A casual game with tons of short levels and a high skill ceiling. Dash and concuss your way to the end of each level as quickly as you can.",
             footer = {"Graphic Design", "Sound Design"},
             tags = {"wip", "game"}
         }}
@@ -21,7 +21,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Terraria, 2026",
             url = "https://steamcommunity.com/sharedfiles/filedetails/?id=3660032479",
             image = "pointy",
-            description = "A resource pack that replaces NPC portraits with hand-drawn ones, excluding pets.",
+            description = "A resource pack for Terraria that replaces NPC portraits with hand-drawn ones. Does not replace pets.",
             tags = {"respack"}
         }, {
             id = "wolf2wad",
@@ -29,7 +29,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Doom, 2025",
             url = "https://github.com/LocalInsomniac/wolf2wad",
             image = "wolf2wad",
-            description = "Customizable command-line tool that converts Wolfenstein 3D maps into Doom WADs.",
+            description = "A customizable command-line tool that converts Wolfenstein 3D maps into Doom WADs.",
             tags = {"tool"}
         }, {
             id = "ntmai",
@@ -37,7 +37,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "GZDoom, 2020",
             url = "/ntmai",
             image = "ntmai",
-            description = "A gameplay mod that makes Doom feel more like a Build Engine game by replicating quirks from Duke Nukem 3D, Blood and Shadow Warrior.",
+            description = "A gameplay mod for GZDoom that makes Doom feel more like a Build Engine game by replicating quirks from Duke Nukem 3D, Blood and Shadow Warrior.",
             footer = {"<a href=\"https://www.doomworld.com/cacowards/2020/gameplay\">Doomworld 2020 Gameplay Mod Award</a>"},
             tags = {"mod"}
         }},
@@ -76,7 +76,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Schwungus, 2025",
             url = "https://github.com/Schwungus/caulk",
             image = "caulk",
-            description = "Convenient Steamworks API wrapper for plain C, since there weren't any left. Supports Steamworks SDK 1.62.",
+            description = "Convenient Steamworks API wrapper for plain C, since there weren't any left. Supports Steamworks SDK v1.63.",
             footer = {"In collaboration with <a href=\"https://nonk.dev\">nonk</a>"},
             tags = {"library"}
         }},

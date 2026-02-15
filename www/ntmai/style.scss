@@ -69,18 +69,20 @@ section {
     justify-content: space-evenly;
     align-items: center;
 
-    &-page {
+    &-left {
         width: 60%;
         padding-left: 5%;
 
         text-align: left;
     }
 
-    &-page2 {
+    &-right {
         width: 50%;
         padding-right: 5%;
 
         text-align: right;
+
+        opacity: 100%;
     }
 
     &-logo {

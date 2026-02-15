@@ -80,9 +80,12 @@
 
                     {% block footer %}
                         <div class="footer">
-                            <div>All content &copy; respective owners.</div>
-                            <div><img src="/assets/hunkathon.png" id="hunk" alt="Footer" title="Photographs by Soh and pieorpi" /></div>
-                            <div id="lastUpdated"></div>
+                            <div class="footer-left"><img src="/assets/hunkathon.png" id="hunk" alt="Footer" title="Background photo by Soh" /></div>
+                            <div class="footer-right">
+                                All content &copy; respective owners.<br />
+                                <span id="lastUpdated"></span><br />
+                                Powered by <a href="https://github.com/nonk123/sanity">sanity</a>
+                            </div>
                         </div>
                     {% endblock footer %}
                 </section>
