@@ -1,95 +1,116 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Can't Sleep {% if self.title() != "home" %}| {% block title %}{% endblock title %}{% endif %}</title>
-        <meta name="description" content="{% block description %}{% endblock description %}" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="canonical" href="https://cantsleep.cc{% if self.url() != '/404' %}{% block url %}{% endblock url %}{% endif %}" />
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-        <link rel="stylesheet" href="/style.css" />
+    <title>Can't Sleep {% if self.title() != "home" %}| {% block title %}{% endblock title %}{% endif %}</title>
 
-        <meta http-equiv="Content-Language" content="en" />
-        <meta name="robots" content="index, follow" />
+    <link rel="canonical"
+        href="https://cantsleep.cc{% if self.url() != '/404' %}{% block url %}{% endblock url %}{% endif %}" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
 
-        <meta property="og:title" content="{{ self.title() }}" />
-        <meta property="og:description" content="{{ self.description() }}" />
-        <meta property="og:image" content="https://cantsleep.cc{% block image %}/assets/meta.png{% endblock image %}" />
-        <meta property="og:url" content="https://cantsleep.cc{{ self.url() }}" />
-        <meta property="og:site_name" content="Can't Sleep" />
-        <meta property="og:type" content="{% block og_type %}profile{% endblock og_type %}" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="robots" content="index, follow" />
 
-        <link rel="preload" href="/assets/consola.ttf" as="font" type="font/ttf" crossorigin />
-        <link rel="preload" href="/assets/consolab.ttf" as="font" type="font/ttf" crossorigin />
-        <link rel="preload" href="/assets/consolai.ttf" as="font" type="font/ttf" crossorigin />
-        <link rel="preload" href="/assets/consolaz.ttf" as="font" type="font/ttf" crossorigin />
-        <link rel="preload" href="/assets/background.png" as="image" />
-        <link rel="preload" href="/assets/icons/home.png" as="image" />
-        <link rel="preload" href="/assets/icons/projects.png" as="image" />
-        <link rel="preload" href="/assets/icons/file.png" as="image" />
-        <link rel="preload" href="/assets/icons/external_small.png" as="image" />
-        <link rel="preload" href="/assets/icons/nonk.png" as="image" />
-        <link rel="preload" href="/assets/icons/vilebeggar.png" as="image" />
-        <link rel="preload" href="/assets/icons/schwungus.png" as="image" />
+    <meta property="og:title" content="{{ self.title() }}" />
+    <meta property="og:image" content="https://cantsleep.cc{% block image %}/assets/meta.png{% endblock image %}" />
+    <meta property="og:url" content="https://cantsleep.cc{{ self.url() }}" />
+    <meta property="og:site_name" content="Can't Sleep" />
+    <meta property="og:type" content="{% block og_type %}profile{% endblock og_type %}" />
 
-        {% block head %}{% endblock head %}
+    <link rel="preload" href="/assets/consola.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/assets/consolab.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/assets/consolai.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/assets/consolaz.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/assets/background.png" as="image" />
+    <link rel="preload" href="/assets/icons/home.png" as="image" />
+    <link rel="preload" href="/assets/icons/projects.png" as="image" />
+    <link rel="preload" href="/assets/icons/file.png" as="image" />
+    <link rel="preload" href="/assets/icons/external_small.png" as="image" />
+    <link rel="preload" href="/assets/icons/nonk.png" as="image" />
+    <link rel="preload" href="/assets/icons/vilebeggar.png" as="image" />
+    <link rel="preload" href="/assets/icons/schwungus.png" as="image" />
 
-        <script defer src="https://umami.schwung.us/script.js" data-website-id="40a0ba16-61a8-407b-a876-1b42949e761c"></script>
-        <script defer src="/info.js"></script>
-    </head>
+    {% block head %}{% endblock head %}
 
-    <body>
-        <main>
-            <div class="cols">
-                <section id="menu">
-                    <section>
-                        {% if self.title() == "home" %}
-                            <div class="menu-button menu-button-current"><img src="/assets/icons/home.png" alt="Home" />home</div>
-                        {% else %}
-                            <a href="/"><div class="menu-button"><img src="/assets/icons/home.png" alt="Home" />home</div></a>
-                        {% endif %}
+    <script defer src="https://umami.schwung.us/script.js"
+        data-website-id="40a0ba16-61a8-407b-a876-1b42949e761c"></script>
+    <script defer src="/info.js"></script>
+</head>
 
-                        {% if self.title() == "projects" %}
-                            <div class="menu-button menu-button-current"><img src="/assets/icons/projects.png" alt="Projects" />projects</div>
-                        {% else %}
-                            <a href="/projects"><div class="menu-button"><img src="/assets/icons/projects.png" alt="Projects" />projects</div></a>
-                        {% endif %}
+<body>
+    <main>
+        <div class="cols">
+            <section id="menu">
+                <section>
+                    {% if self.title() == "home" %}
+                    <div class="menu-button menu-button-current"><img src="/assets/icons/home.png" alt="Home" />home
+                    </div>
+                    {% else %}
+                    <a href="/">
+                        <div class="menu-button"><img src="/assets/icons/home.png" alt="Home" />home</div>
+                    </a>
+                    {% endif %}
 
-                        <a href="https://files.cantsleep.cc"><div class="menu-button"><img src="/assets/icons/file.png" alt="Files" />files</div></a>
-                    </section>
+                    {% if self.title() == "projects" %}
+                    <div class="menu-button menu-button-current"><img src="/assets/icons/projects.png"
+                            alt="Projects" />projects</div>
+                    {% else %}
+                    <a href="/projects">
+                        <div class="menu-button"><img src="/assets/icons/projects.png" alt="Projects" />projects</div>
+                    </a>
+                    {% endif %}
 
-                    <section>
-                        <div class="menu-category"><span>friends<img src="/assets/icons/external_small.png" alt="External Links" /></span></div>
-                        <a href="https://nonk.dev"><div class="menu-button"><img src="/assets/icons/nonk.png" alt="nonk" />nonk</div></a>
-                        <a href="https://vilebeggar.github.io"><div class="menu-button"><img src="/assets/icons/vilebeggar.png" alt="Vile Beggar" />v.beggar</div></a>
-                    </section>
-
-                    <section>
-                        <div class="menu-category"><span>collectives<img src="/assets/icons/external_small.png" alt="External Links" /></span></div>
-                        <a href="https://schwung.us"><div class="menu-button"><img src="/assets/icons/schwungus.png" alt="Schwungus" />schwungus</div></a>
-                    </section>
+                    <a href="https://files.cantsleep.cc">
+                        <div class="menu-button"><img src="/assets/icons/file.png" alt="Files" />files</div>
+                    </a>
                 </section>
 
-                <section id="contents">
-                    {% block content %}{% endblock content %}
-
-                    <div class="hr"></div>
-
-                    {% block footer %}
-                        <div class="footer">
-                            <div class="footer-left"><img src="/assets/hunkathon.png" id="hunk" alt="Footer" title="Background photo by Soh" /></div>
-                            <div class="footer-right">
-                                All content &copy; respective owners.<br />
-                                <span id="lastUpdated"></span><br />
-                                Powered by <a href="https://github.com/nonk123/sanity">sanity</a>
-                            </div>
+                <section>
+                    <div class="menu-category"><span>friends<img src="/assets/icons/external_small.png"
+                                alt="External Links" /></span></div>
+                    <a href="https://nonk.dev">
+                        <div class="menu-button"><img src="/assets/icons/nonk.png" alt="nonk" />nonk</div>
+                    </a>
+                    <a href="https://vilebeggar.github.io">
+                        <div class="menu-button"><img src="/assets/icons/vilebeggar.png" alt="Vile Beggar" />v.beggar
                         </div>
-                    {% endblock footer %}
+                    </a>
                 </section>
-            </div>
-        </main>
-    </body>
+
+                <section>
+                    <div class="menu-category"><span>collectives<img src="/assets/icons/external_small.png"
+                                alt="External Links" /></span></div>
+                    <a href="https://schwung.us">
+                        <div class="menu-button"><img src="/assets/icons/schwungus.png" alt="Schwungus" />schwungus
+                        </div>
+                    </a>
+                </section>
+            </section>
+
+            <section id="contents">
+                {% block content %}{% endblock content %}
+
+                <div class="hr"></div>
+
+                {% block footer %}
+                <div class="footer">
+                    <div class="footer-left"><img src="/assets/hunkathon.png" id="hunk" alt="Footer"
+                            title="Background photo by Soh" /></div>
+                    <div class="footer-right">
+                        All content &copy; respective owners.<br />
+                        <span id="lastUpdated"></span><br />
+                        Powered by <a href="https://github.com/nonk123/sanity">sanity</a>
+                    </div>
+                </div>
+                {% endblock footer %}
+            </section>
+        </div>
+    </main>
+</body>
+
 </html>
