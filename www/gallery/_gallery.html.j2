@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+
+{% block title %}gallery{% endblock title %}
+{% block url %}/gallery{% endblock url %}
+
+{% block head %}
+<link rel="stylesheet" href="/gallery/style.css" />
+<script defer src="/modal.js"></script>
+{% endblock head %}
+
+{% block content %}
+<h2>gallery</h2>
+
+<p>
+    Look, ma! I can draw!<br>Artistic quality may vary.<br />
+    Click on a thumbnail to view the full image.<br /><br />
+    <b>You may not use these works for any purposes.</b>
+</p>
+
+{% for year in years %}
+<h1><span>{{ year.year }}</span></h1>
+
+<div class="gallery">
+    {% for image in year.images %}<!--
+    --><img src="/gallery/assets/{{ image.id }}_thumbnail.png" alt="{{ image.name }}" title="{{ image.name }}"
+        class="modal" data-full="/gallery/assets/{{ image.id }}.png"
+        data-text="<b>{{ image.name }}</b> ({{ year.year }})<br />{{ image.description }}" /><!--
+    -->{% endfor %}
+</div>
+{% endfor %}
+{% endblock content %}
