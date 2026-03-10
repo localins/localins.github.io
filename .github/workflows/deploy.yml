@@ -2,7 +2,7 @@ name: Deploy to cantsleep.cc
 
 on:
   push:
-    branches: ["deploy"]
+    branches: [deploy]
 
 permissions:
   contents: read
@@ -10,7 +10,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
         with: { ref: deploy }
       - name: Build
         run: |
-          wget -O sanity https://github.com/nonk123/sanity/releases/download/gh-actions/sanity-release-linux
+          wget -O sanity https://github.com/nonk123/sanity/releases/latest/download/sanity-linux
           chmod +x sanity
           RUST_LOG=debug ./sanity
       - name: Setup Pages
