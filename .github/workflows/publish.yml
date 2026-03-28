@@ -1,0 +1,28 @@
+name: Publish to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Render & publish
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Publish
+        id: publish
+        uses: nonk123/sanity-action@master
+        with: { push: true }
