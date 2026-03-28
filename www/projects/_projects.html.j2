@@ -19,15 +19,16 @@
 
 {% for project in category.projects %}
 <div class="project">
-    <div class="project-cover">
-        {% if project.url %}<a href="{{ project.url }}">{% endif %}
+    {% if project.url %}<a href="{{ project.url }}">{% endif %}
+        <div class="project-cover">
             {% if project.image %}
             <img src="/projects/assets/{{ project.image }}.png" alt="{{ project.name }}" />
             {% else %}
             <img src="/assets/broken.png" alt="{{ project.name }}" />
             {% endif %}
-            {% if project.url %}</a>{% endif %}
-    </div>
+        </div>
+        {% if project.url %}
+    </a>{% endif %}
 
     <div class="project-text"><!--
         -->{% if project.tags is iterable and project.tags is not string and project.tags is not mapping %}<!--

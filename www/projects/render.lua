@@ -71,6 +71,15 @@ render("projects/_projects.html", "projects/index.html", {
         category = "tech",
 
         projects = {{
+            id = "nutpunch",
+            name = "NutPunch",
+            alt = "Schwungus, 2025",
+            url = "https://github.com/Schwungus/nutpunch",
+            image = "nutpunch",
+            description = "UDP hole-punching and peer-to-peer networking library for plain C.",
+            footer = {"Bells and Whistles"},
+            tags = {"library"}
+        }, {
             id = "caulk",
             name = "caulk",
             alt = "Schwungus, 2025",
