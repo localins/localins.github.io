@@ -3,6 +3,7 @@ name: Publish to GitHub Pages
 on:
   workflow_dispatch:
   push:
+    branches: [master]
 
 concurrency:
   group: pages
@@ -12,6 +13,7 @@ jobs:
   publish:
     name: Render & publish
     runs-on: ubuntu-24.04
+    if: github.repository == 'localins/localins.github.io'
     environment:
       name: github-pages
       url: ${{ steps.publish.outputs.page_url }}
