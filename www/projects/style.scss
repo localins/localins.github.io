@@ -1,10 +1,10 @@
 .project {
-    margin: 1em 0;
+    margin: 16px 0;
     min-width: 100%;
     min-height: 200px;
 
     display: flex;
-    overflow: hidden;
+    overflow: auto;
 
     background-color: #111214;
 
@@ -30,15 +30,15 @@
     }
 
     &-text {
-        padding: 0.5em;
+        padding: 8px;
 
         sub {
             vertical-align: middle;
-            margin-left: 0.75em;
+            margin-left: 8px;
         }
 
         ul {
-            padding: 0 1em;
+            padding: 0 16px;
             margin: 0;
 
             opacity: 0.7;
@@ -51,39 +51,38 @@
 
     &-icon {
         vertical-align: middle;
-        padding-right: 0.25em;
+        padding-right: 4px;
     }
 
     &-external {
         vertical-align: middle;
-        margin-left: 0.25em;
-        margin-right: -0.25em;
+        margin-left: 4px;
 
         opacity: 0.6;
     }
 
     &-hr {
         height: 1px;
-        margin: 0.5em 0;
+        margin: 8px 0;
 
         background-color: gray;
     }
 }
 
 .project-misc {
-    margin-top: 0.5em;
+    margin-top: 8px;
 
     li {
-        margin: 0.25em -1em;
+        margin: 4px -16px;
     }
 
     sub {
         vertical-align: middle;
-        margin-left: 0.75em;
+        margin-left: 8px;
     }
 
     span {
-        margin-left: 0.75em;
+        margin-left: 8px;
         opacity: 0.7;
     }
 }

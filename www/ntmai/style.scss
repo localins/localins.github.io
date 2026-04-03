@@ -1,14 +1,14 @@
 @import url("/style.css");
 
 body {
-    padding: 0;
+    width: 800px;
 
     background-image: unset;
     background-color: #450c04;
 }
 
 h2 {
-    margin-bottom: 0.5em;
+    margin-bottom: 8px;
     color: #d7bb43;
 }
 
@@ -23,14 +23,14 @@ h2 {
 }
 
 .contents {
-    padding: 2em;
+    padding: 32px;
     background-color: black;
     overflow-x: hidden;
 }
 
 header {
     width: 100%;
-    margin-bottom: -0.5em;
+    margin-bottom: -8px;
 
     text-align: center;
 
@@ -57,12 +57,12 @@ section {
     width: 1px;
     height: auto;
     border-left: 1px solid gray;
-    margin: 0 2em;
+    margin: 0 32px;
 }
 
 .footer {
     width: 100%;
-    margin-top: 2em;
+    margin-top: 32px;
 
     display: flex;
     flex-direction: row;
@@ -106,7 +106,7 @@ section {
 }
 
 .subtitle {
-    padding-top: 0.5em;
+    padding-top: 8px;
     color: #d7bb43;
     font-size: 12px;
 }

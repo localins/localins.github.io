@@ -45,9 +45,8 @@ img {
 }
 
 body {
-    width: 800px;
-    height: max-content;
-    padding: 2em;
+    max-width: 800px;
+    height: 100vh;
     margin: 0 auto;
 
     font-family: Consolas, monospace;
@@ -65,19 +64,23 @@ body {
 
 .cols {
     display: flex;
-    justify-content: center;
 }
 
 #menu {
-    width: max-content;
+    position: sticky;
+    top: 0;
+
+    width: 128px;
+    height: 100vh;
     flex-shrink: 0;
+    overflow: auto;
 
     line-height: 1;
 
     background: rgba(35, 38, 41, 0.3);
 
     section {
-        margin-bottom: 16px;
+        margin: 8px 0;
     }
 
     a {
@@ -88,7 +91,7 @@ body {
 
 .menu {
     &-category {
-        padding-left: 0.5em;
+        padding-left: 8px;
         margin-bottom: 1px;
 
         font-size: 64%;
@@ -102,12 +105,12 @@ body {
 
         img {
             vertical-align: middle;
-            margin-left: 0.25em;
+            margin-left: 4px;
         }
     }
 
     &-button {
-        padding: 0.5em;
+        padding: 8px;
         margin-bottom: 1px;
 
         white-space: nowrap;
@@ -116,7 +119,7 @@ body {
         background-color: #232629;
 
         img {
-            padding-right: 0.5em;
+            padding-right: 8px;
             vertical-align: middle;
         }
 
@@ -133,7 +136,9 @@ body {
 
 #contents {
     width: 100%;
-    padding: 2em;
+    height: 100vh;
+
+    padding: 32px;
 
     background-color: #232629;
     overflow: auto;
@@ -141,21 +146,20 @@ body {
 
 h1 {
     font-size: 150%;
-    margin: 1em 0;
+    margin: 16px 0;
 
     span {
         display: inline-block;
         color: #232629;
         background-color: white;
 
-        padding: 0 0.5em;
+        padding: 0 8px;
         border-radius: 16px 16px 0 0;
     }
 
     img {
         vertical-align: middle;
-        margin-left: 0.25em;
-        margin-right: -0.2em;
+        margin-left: 4px;
     }
 
     &:after {
@@ -175,7 +179,7 @@ h2 {
 .hr {
     width: 100%;
     height: 1px;
-    margin: 2em 0;
+    margin: 32px 0;
 
     background-color: gray;
 }
@@ -187,7 +191,7 @@ h2 {
     user-select: none;
 
     a {
-        margin: 0.5em;
+        margin: 8px;
     }
 }
 
@@ -203,7 +207,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 16px;
 
     &-left {
         text-align: right;
@@ -275,7 +279,7 @@ h2 {
         word-wrap: break-word;
 
         img {
-            margin-left: 0.25em;
+            margin-left: 4px;
             vertical-align: middle;
 
             opacity: 0.6;
