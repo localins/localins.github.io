@@ -4,79 +4,101 @@
 {% block url %}/projects{% endblock url %}
 
 {% block head %}
-<link rel="stylesheet" href="/projects/style.css" />{% endblock head %}
+<link rel="stylesheet" href="/assets/css/projects.css" />
+<link rel="preload" href="/assets/img/external16.png" as="image" />
+{% endblock head %}
 
-{% block content %}
-<h2>projects</h2>
+{% block main %}
+<h1>projects</h1>
 
 <p>
-    These are most of the public projects that I have been a part of.<br>
+    These are most of the public projects I have meaningfully contributed to.<br>
     I work on these in my own time, which is often sparse these days.
 </p>
 
 {% for category in categories %}
-<h1><span>{{ category.category }}</span></h1>
+<br>
+<h1>{{ category.category }}</h1>
 
 {% for project in category.projects %}
 <div class="project">
-    {% if project.url %}<a href="{{ project.url }}">{% endif %}
-        <div class="project-cover">
-            {% if project.image %}
-            <img src="/projects/assets/{{ project.image }}.png" alt="{{ project.name }}" />
-            {% else %}
-            <img src="/assets/broken.png" alt="{{ project.name }}" />
-            {% endif %}
+    {% if project.url %}
+    <a href="{{ project.url }}">
+        {% endif %}
+        <div class="project-left">
+            <img src="/assets/img/{{ project.image }}.png" alt="{{ project.name }}" />
         </div>
         {% if project.url %}
-    </a>{% endif %}
+    </a>
+    {% endif %}
 
-    <div class="project-text"><!--
-        -->{% if project.tags is iterable and project.tags is not string and project.tags is not mapping %}<!--
-        -->{% for tag in project.tags %}<!--
-        -->{% set tag = tags[tag] %}<!--
-        --><img class="project-icon" src="{{ tag.icon }}" alt="{{ tag.name }}" title="{{ tag.name }}" /><!--
-        -->{% endfor %}<!--
-        -->{% endif %}<!--
+    <div class="project-right">
+        <p>
+            {% if project.tags is iterable and project.tags is not string and project.tags is not mapping %}<!--
+                -->{% for tag in project.tags %}<!--
+                    -->{% set tag = tags[tag] %}<!--
+                        --><img class="project-icon" src="{{ tag.icon }}" alt="{{ tag.name }}"
+                title="{{ tag.name }}" /><!--
+                -->{% endfor %}<!--
+            -->{% endif %}<!--
 
-        -->{% if project.url %}<a href="{{ project.url }}"><b>{{ project.name }}</b></a>{% if project.url[0] != '/'
-        %}<img class="project-external" src="/assets/icons/external.png" alt="External Link" />{% endif %}{% else
-        %}<b>{{
-            project.name }}</b>{% endif %}<!--
-        -->{% if project.alt %}<sub>{{ project.alt }}</sub>{% endif %}<!--
+            -->{% if project.url %} <a href="{{ project.url }}"><b>{{ project.name }}</b><!--
+                -->{% if project.url[0] != '/'%} <img class="project-external" src="/assets/img/external16.png"
+                    alt="(external)" />{% endif %}</a><!--
+            -->{% else %}<!--
+            --> <b>{{project.name }}</b><!--
+            -->{% endif %}<!--
 
-        -->
-        <div class="project-hr"></div>
-        {{ project.description|safe }}
-        {% if project.footer is iterable and project.footer is not string and project.footer is not mapping %}
-        <br /><br />
+            -->{% if project.alt %} <span>{{ project.alt }}</span>{% endif %}
+        </p>
+
+        <div class="hr"></div>
+
+        <p>
+            {{ project.description|safe }}<!--
+            -->{% if project.footer %}
         <ul>
-            {% for text in project.footer %}
-            <li>{{ text|safe }}</li>
-            {% endfor %}
+            <li>{{ project.footer|safe }}</li>
         </ul>
         {% endif %}
+        </p>
     </div>
 </div>
 {% endfor %}
 
 {% if category.misc %}
-<b>See also</b>
-<ul class="project-misc">
+<br>
+<p><b>See also:</b>
+<ul>
     {% for project in category.misc %}
-    <li><!--
-        -->{% if project.tags is iterable and project.tags is not string and project.tags is not mapping %}<!--
+    <li>
+        {% if project.tags is iterable and project.tags is not string and project.tags is not mapping %}<!--
         -->{% for tag in project.tags %}<!--
         -->{% set tag = tags[tag] %}<!--
         --><img class="project-icon" src="{{ tag.icon }}" alt="{{ tag.name }}" title="{{ tag.name }}" /><!--
         -->{% endfor %}<!--
-        -->{% endif %}<!--
-        --><b><a href="{{ project.url }}">{{ project.name }}</a></b>{% if project.url[0] != '/' %}<img
-            class="project-external" src="/assets/icons/external.png" alt="External Link" />{% endif %}<!--
-        --><sub>{{ project.alt }}</sub><!--
-        --><span>{{ project.description }}</span><!--
-    --></li>
+        -->{% endif %}
+
+        {% if project.url %} <a href="{{ project.url }}"><b>{{ project.name }}</b>
+            {% if project.url[0] != '/'%} <img class="project-external" src="/assets/img/external16.png"
+                alt="(external)" />{% endif %}</a>
+        {% else %}
+        <b>{{ project.name }}</b>
+        {% endif %}
+
+        {% if project.alt %}
+        <span>{{ project.alt }}</span>
+        {% endif %}
+
+        {% if project.description %}
+        {{ project.description|safe }}
+        {% endif %}
+    </li>
     {% endfor %}
 </ul>
+</p>
 {% endif %}
+
 {% endfor %}
-{% endblock content %}
+
+{% endblock main %}

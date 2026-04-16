@@ -10,117 +10,92 @@
 
     <link rel="canonical"
         href="https://cantsleep.cc{% if self.url() != '/404' %}{% block url %}{% endblock url %}{% endif %}" />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/ico/main.ico" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
 
     <meta http-equiv="Content-Language" content="en" />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:title" content="{{ self.title() }}" />
-    <meta property="og:image" content="https://cantsleep.cc{% block image %}/assets/meta.png{% endblock image %}" />
     <meta property="og:url" content="https://cantsleep.cc{{ self.url() }}" />
     <meta property="og:site_name" content="Can't Sleep" />
     <meta property="og:type" content="{% block og_type %}profile{% endblock og_type %}" />
 
-    <link rel="preload" href="/assets/consola.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/assets/consolab.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/assets/consolai.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/assets/consolaz.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/assets/background.png" as="image" />
-    <link rel="preload" href="/assets/icons/home.png" as="image" />
-    <link rel="preload" href="/assets/icons/projects.png" as="image" />
-    <link rel="preload" href="/assets/icons/file.png" as="image" />
-    <link rel="preload" href="/assets/icons/external_small.png" as="image" />
-    <link rel="preload" href="/assets/icons/nonk.png" as="image" />
-    <link rel="preload" href="/assets/icons/vilebeggar.png" as="image" />
-    <link rel="preload" href="/assets/icons/schwungus.png" as="image" />
+    <link rel="preload" href="/assets/img/background.png" as="image" />
+    <link rel="preload" href="/assets/img/desktop16.png" as="image" />
+    <link rel="preload" href="/assets/img/briefcase16.png" as="image" />
+    <link rel="preload" href="/assets/img/image16.png" as="image" />
+    <link rel="preload" href="/assets/img/files16.png" as="image" />
+    <link rel="preload" href="/assets/img/external8.png" as="image" />
 
     {% block head %}{% endblock head %}
 
     <script defer src="https://umami.schwung.us/script.js"
         data-website-id="40a0ba16-61a8-407b-a876-1b42949e761c"></script>
-    <script defer src="/info.js"></script>
+    <script defer src="/assets/js/footer.js"></script>
 </head>
 
 <body>
-    <main>
-        <div class="cols">
-            <section id="menu">
-                <section>
-                    <div class="menu-category"><span>main</span></div>
+    <div class="body">
+        <header>
+            <div class="banner"><a href="/"><img src="/assets/img/banner.png" alt="Banner" /></a></div>
+
+            <div class="navbar">
+                <div class="navbar-section">
                     {% if self.title() == "home" %}
-                    <div class="menu-button menu-button-current"><img src="/assets/icons/home.png" alt="Home" />home
+                    <div class="navbar-button-active">
+                        <img src="/assets/img/desktop16.png" /><span>home</span>
                     </div>
                     {% else %}
                     <a href="/">
-                        <div class="menu-button"><img src="/assets/icons/home.png" alt="Home" />home</div>
+                        <div class="navbar-button">
+                            <img src="/assets/img/desktop16.png" /><span>home</span>
+                        </div>
                     </a>
                     {% endif %}
 
                     {% if self.title() == "projects" %}
-                    <div class="menu-button menu-button-current"><img src="/assets/icons/projects.png"
-                            alt="Projects" />projects</div>
+                    <div class="navbar-button-active">
+                        <img src="/assets/img/briefcase16.png" /><span>projects</span>
+                    </div>
                     {% else %}
                     <a href="/projects">
-                        <div class="menu-button"><img src="/assets/icons/projects.png" alt="Projects" />projects</div>
+                        <div class="navbar-button">
+                            <img src="/assets/img/briefcase16.png" /><span>projects</span>
+                        </div>
                     </a>
                     {% endif %}
 
                     {% if self.title() == "gallery" %}
-                    <div class="menu-button menu-button-current"><img src="/assets/icons/gallery.png"
-                            alt="Gallery" />gallery</div>
+                    <div class="navbar-button-active">
+                        <img src="/assets/img/image16.png" /><span>gallery</span>
+                    </div>
                     {% else %}
                     <a href="/gallery">
-                        <div class="menu-button"><img src="/assets/icons/gallery.png" alt="Gallery" />gallery</div>
+                        <div class="navbar-button">
+                            <img src="/assets/img/image16.png" /><span>gallery</span>
+                        </div>
                     </a>
                     {% endif %}
 
                     <a href="https://files.cantsleep.cc">
-                        <div class="menu-button"><img src="/assets/icons/file.png" alt="Files" />files</div>
-                    </a>
-                </section>
-
-                <section>
-                    <div class="menu-category"><span>friends<img src="/assets/icons/external_small.png"
-                                alt="External Links" /></span></div>
-                    <a href="https://nonk.dev">
-                        <div class="menu-button"><img src="/assets/icons/nonk.png" alt="nonk" />nonk</div>
-                    </a>
-                    <a href="https://vilebeggar.github.io">
-                        <div class="menu-button"><img src="/assets/icons/vilebeggar.png" alt="Vile Beggar" />v.beggar
+                        <div class="navbar-button">
+                            <img src="/assets/img/files16.png" /><span>files</span>
                         </div>
                     </a>
-                </section>
-
-                <section>
-                    <div class="menu-category"><span>collectives<img src="/assets/icons/external_small.png"
-                                alt="External Links" /></span></div>
-                    <a href="https://schwung.us">
-                        <div class="menu-button"><img src="/assets/icons/schwungus.png" alt="Schwungus" />schwungus
-                        </div>
-                    </a>
-                </section>
-            </section>
-
-            <section id="contents">
-                {% block content %}{% endblock content %}
-
-                <div class="hr"></div>
-
-                {% block footer %}
-                <div class="footer">
-                    <div class="footer-left"><img src="/assets/hunkathon.png" id="hunk" alt="Footer"
-                            title="Background photo by Soh" /></div>
-                    <div class="footer-right">
-                        All content &copy; respective owners.<br />
-                        <span id="lastUpdated"></span><br />
-                        Powered by <a href="https://github.com/nonk123/sanity">sanity</a>
-                    </div>
                 </div>
-                {% endblock footer %}
-            </section>
-        </div>
-    </main>
+            </div>
+        </header>
+
+        <main>{% block main %}{% endblock main %}</main>
+
+        <footer>
+            <div class="footer-left">All content &copy; respective owners.</div>
+            <div class="footer-center">Powered by <a href="https://github.com/nonk123/sanity">sanity
+                    <img src="/assets/img/external8.png" alt="(external)" /></a></div>
+            <div class="footer-right" id="last-updated"></div>
+        </footer>
+    </div>
 </body>
 
 </html>

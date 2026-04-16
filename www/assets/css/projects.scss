@@ -1,0 +1,34 @@
+main {
+    li {
+        span {
+            color: gray;
+        }
+    }
+
+    .project {
+        display: flex;
+        flex-direction: row;
+
+        margin-bottom: 0.5em;
+
+        background-color: #111214;
+
+        &-left {
+            min-width: 128px;
+        }
+
+        &-right {
+            flex-grow: 1;
+            padding: 0.5em;
+        }
+
+        span {
+            color: gray;
+        }
+
+        ul {
+            padding: 0 0 0 1em;
+            color: gray;
+        }
+    }
+}

@@ -3,52 +3,56 @@
 {% block title %}home{% endblock title %}
 
 {% block head %}
-<link rel="preload" href="/assets/logo.png" as="image" />
-<link rel="preload" href="/assets/icons/external.png" as="image" />
-<link rel="preload" href="/assets/icons/links/email.png" as="image" />
-<link rel="preload" href="/assets/icons/links/github.png" as="image" />
-<link rel="preload" href="/assets/icons/links/discord.png" as="image" />
-<link rel="preload" href="/assets/icons/links/twitter.png" as="image" />
-<link rel="preload" href="/assets/icons/links/newgrounds.png" as="image" />
-
-<script defer src="/home.js"></script>
+<link rel="stylesheet" href="/assets/css/index.css" />
+<link rel="preload" href="/assets/img/me.png" as="image" />
+<link rel="preload" href="/assets/img/external16.png" as="image" />
+<script defer src="/assets/js/contact.js"></script>
 {% endblock head %}
 
-{% block content %}
-<img src="/assets/logo.png" id="logo" alt="Can't Sleep" />
+{% block main %}
+<h1>welcome</h1>
 
-<h1><span>welcome</span></h1>
+<div class="profile">
+    <div class="profile-left">
+        <p>
+            Thanks for stopping by.<br>
+            <b>Can't Sleep</b> is my nickname. I do odd jobs on my cool computer.<br>
+            This website works as a portal for my profiles and projects.<br><br>
+        </p>
 
-<p>
-    'Sup, I do odd jobs on my cool computer.
-</p>
+        <p>
+            These are my attributes:
+        <ul>
+            <li><b>Programming:</b> C, C#, GameMaker Language</li>
+            <li><b>Graphics:</b> Aseprite, Blender, Drawpile, Paint.NET</li>
+            <li><b>Audio:</b> Audacity, FFmpeg</li>
+        </ul><br>
+        </p>
 
-<p>
-    This site works as a portal for my profiles and projects,
-    some of which may be haphazardly scattered.
-</p>
+        <p>Use the navigation bar to explore!</p>
+        <br>
+    </div>
 
-<p>My attributes:</p>
-<ul>
-    <li><b>Programming:</b> C, GameMaker Language</li>
-    <li><b>Graphics:</b> Aseprite, Blender, Drawpile, Paint.NET</li>
-    <li><b>Audio:</b> Audacity, FFmpeg</li>
-</ul>
+    <div class="profile-right">
+        <img src="/assets/img/me.png" alt="Scientific interpretation of myself" />
+    </div>
+</div>
 
-<p>Use the sidebar on the left to explore!</p>
-
-<h1><span>contact<img src="/assets/icons/external.png" alt="External Links" /></span></h1>
+<h1>contact <img src="/assets/img/external16.png" alt="(external)" /></h1>
 
 <div class="links">
     <p id="links-description">Hover over an icon</p>
-    <a id="links-email" href="mailto:me@cantsleep.cc"><img src="/assets/icons/links/email.png" alt="Email" /></a>
-    <a id="links-github" href="https://github.com/localins"><img src="/assets/icons/links/github.png"
-            alt="GitHub" /></a>
-    <a id="links-discord" href="https://discord.com/users/871682109050322984"><img src="/assets/icons/links/discord.png"
-            alt="Discord" /></a>
-    <a id="links-twitter" href="https://twitter.com/localins"><img src="/assets/icons/links/twitter.png"
-            alt="Twitter" /></a>
-    <a id="links-newgrounds" href="https://localinsomniac.newgrounds.com/"><img src="/assets/icons/links/newgrounds.png"
+    <a id="links-email" href="mailto:me@cantsleep.cc"><img src="/assets/img/email48.png" alt="Email" /></a><!--
+    --><a id="links-github" href="https://github.com/localins"><img src="/assets/img/github48.png" alt="GitHub" /></a><!--
+    --><a id="links-discord" href="https://discord.com/users/871682109050322984"><img src="/assets/img/discord48.png"
+            alt="Discord" /></a><!--
+    --><a id="links-twitter" href="https://twitter.com/localins"><img src="/assets/img/twitter48.png"
+            alt="Twitter" /></a><!--
+    --><a id="links-newgrounds" href="https://localinsomniac.newgrounds.com/"><img src="/assets/img/newgrounds48.png"
             alt="Newgrounds" /></a>
 </div>
-{% endblock content %}
+
+<p>
+    I'm also part of the <a href="https://schwung.us">Schwungus</a> collective.
+</p>
+{% endblock main %}
