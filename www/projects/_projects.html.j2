@@ -54,21 +54,20 @@
 
         <div class="hr"></div>
 
-        <p>
-            {{ project.description|safe }}<!--
-            -->{% if project.footer %}
+        <p>{{ project.description|safe }}</p>
+
+        {% if project.footer %}
         <ul>
             <li>{{ project.footer|safe }}</li>
         </ul>
         {% endif %}
-        </p>
     </div>
 </div>
 {% endfor %}
 
 {% if category.misc %}
 <br>
-<p><b>See also:</b>
+<p><b>See also:</b></p>
 <ul>
     {% for project in category.misc %}
     <li>
@@ -96,7 +95,6 @@
     </li>
     {% endfor %}
 </ul>
-</p>
 {% endif %}
 
 {% endfor %}
