@@ -27,17 +27,17 @@ render("projects/_projects.html", "projects/index.html", {
             id = "wolf2wad",
             name = "wolf2wad",
             alt = "Doom, 2025",
-            url = "https://github.com/LocalInsomniac/wolf2wad",
+            url = "https://github.com/localins/wolf2wad",
             image = "wolf2wad128",
             description = "Customizable command-line tool.<br>Converts Wolfenstein 3D maps into Doom WADs.",
             tags = {"tool"}
         }, {
             id = "ntmai",
             name = "Nobody Told Me About id",
-            alt = "UZDoom/GZDoom, 2020",
+            alt = "UZDoom, 2020",
             url = "/ntmai",
             image = "ntmai128",
-            description = "A gameplay mod for GZDoom-based source ports.<br>Makes Doom feel more like a Build Engine game by replicating quirks from Duke Nukem 3D, Blood and Shadow Warrior.",
+            description = "A gameplay mod for UZDoom.<br>Makes Doom feel more like a Build Engine game by replicating quirks from Duke Nukem 3D, Blood and Shadow Warrior.",
             footer = "<a href=\"https://www.doomworld.com/cacowards/2020/gameplay\">Doomworld 2020 Gameplay Mod Award</a>",
             tags = {"mod"}
         }},
@@ -45,26 +45,32 @@ render("projects/_projects.html", "projects/index.html", {
         misc = {{
             name = "PNP",
             alt = "2024",
-            url = "https://github.com/LocalInsomniac/PNP",
-            description = "Universal CoD Zombies perks and powerups for GZDoom",
+            url = "https://github.com/localins/PNP",
+            description = "Universal CoD Zombies perks and powerups for UZDoom",
+            tags = {"mod"}
+        }, {
+            name = "SpotMe",
+            alt = "2024",
+            url = "https://github.com/localins/SpotMe",
+            description = "Universal key radar for UZDoom",
             tags = {"mod"}
         }, {
             name = "ParryMe",
             alt = "2023",
-            url = "https://github.com/LocalInsomniac/ParryMe",
-            description = "Universal parrying mod for GZDoom",
+            url = "https://github.com/localins/ParryMe",
+            description = "Universal parrying mod for UZDoom",
             tags = {"mod"}
         }, {
             name = "FadeMe",
             alt = "2023",
-            url = "https://github.com/LocalInsomniac/FadeMe",
-            description = "Universal corpse fading mod for GZDoom",
+            url = "https://github.com/localins/FadeMe",
+            description = "Universal corpse fading mod for UZDoom",
             tags = {"mod"}
         }, {
             name = "FrameMe",
             alt = "2023",
-            url = "https://github.com/LocalInsomniac/FrameMe",
-            description = "Universal freezecam mod for GZDoom",
+            url = "https://github.com/localins/FrameMe",
+            description = "Universal freezecam mod for UZDoom",
             tags = {"mod"}
         }}
     }, {
