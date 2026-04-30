@@ -43,34 +43,40 @@ render("projects/_projects.html", "projects/index.html", {
         }},
 
         misc = {{
+            name = "ReviveMe",
+            alt = "2026",
+            url = "https://github.com/localins/ReviveMe",
+            description = "Universal DBNO for UZDoom",
+            tags = {"mod"}
+        }, {
+            name = "SpotMe",
+            alt = "2026",
+            url = "https://github.com/localins/SpotMe",
+            description = "Universal key radar for UZDoom",
+            tags = {"mod"}
+        }, {
             name = "PNP",
             alt = "2024",
             url = "https://github.com/localins/PNP",
             description = "Universal CoD Zombies perks and powerups for UZDoom",
             tags = {"mod"}
         }, {
-            name = "SpotMe",
-            alt = "2024",
-            url = "https://github.com/localins/SpotMe",
-            description = "Universal key radar for UZDoom",
-            tags = {"mod"}
-        }, {
             name = "ParryMe",
             alt = "2023",
             url = "https://github.com/localins/ParryMe",
-            description = "Universal parrying mod for UZDoom",
+            description = "Universal parrying for UZDoom",
             tags = {"mod"}
         }, {
             name = "FadeMe",
             alt = "2023",
             url = "https://github.com/localins/FadeMe",
-            description = "Universal corpse fading mod for UZDoom",
+            description = "Universal corpse fading for UZDoom",
             tags = {"mod"}
         }, {
             name = "FrameMe",
             alt = "2023",
             url = "https://github.com/localins/FrameMe",
-            description = "Universal freezecam mod for UZDoom",
+            description = "Universal freezecam for UZDoom",
             tags = {"mod"}
         }}
     }, {
@@ -91,7 +97,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Schwungus, 2025",
             url = "https://github.com/Schwungus/caulk",
             image = "caulk128",
-            description = "Convenient Steamworks API wrapper for plain C, since there weren't any left.<br>Supports Steamworks SDK v1.63.",
+            description = "Convenient Steamworks API wrapper for plain C, since there weren't any left.<br>Supports Steamworks SDK v1.62 and newer.",
             footer = "In collaboration with <a href=\"https://nonk.dev\">nonk</a>",
             tags = {"library"}
         }},
