@@ -24,7 +24,6 @@
     <link rel="preload" href="/assets/img/background.png" as="image" />
     <link rel="preload" href="/assets/img/desktop16.png" as="image" />
     <link rel="preload" href="/assets/img/briefcase16.png" as="image" />
-    <link rel="preload" href="/assets/img/image16.png" as="image" />
     <link rel="preload" href="/assets/img/files16.png" as="image" />
     <link rel="preload" href="/assets/img/external8.png" as="image" />
 
@@ -62,18 +61,6 @@
                     <a href="/projects">
                         <div class="navbar-button">
                             <img src="/assets/img/briefcase16.png" /><span>projects</span>
-                        </div>
-                    </a>
-                    {% endif %}
-
-                    {% if self.title() == "gallery" %}
-                    <div class="navbar-button-active">
-                        <img src="/assets/img/image16.png" /><span>gallery</span>
-                    </div>
-                    {% else %}
-                    <a href="/gallery">
-                        <div class="navbar-button">
-                            <img src="/assets/img/image16.png" /><span>gallery</span>
                         </div>
                     </a>
                     {% endif %}
