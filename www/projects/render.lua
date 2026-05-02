@@ -90,7 +90,7 @@ render("projects/_projects.html", "projects/index.html", {
             image = "nutpunch128",
             description = "UDP hole-punching and peer-to-peer networking library for plain C.",
             footer = "Callbacks, Matchmaking & Optimizations",
-            tags = {"library"}
+            tags = {"wip", "library"}
         }, {
             id = "caulk",
             name = "caulk",
@@ -120,7 +120,7 @@ render("projects/_projects.html", "projects/index.html", {
     tags = {
         wip = {
             icon = "/assets/img/warn16.png",
-            name = "Work in Progress"
+            name = "Work In Progress"
         },
 
         game = {
