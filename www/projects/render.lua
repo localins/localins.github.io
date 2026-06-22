@@ -8,7 +8,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Mightcer, 2025",
             url = "https://store.steampowered.com/app/3719890",
             image = "dcb128",
-            description = "A casual game with tons of short levels and a high skill ceiling.<br>Dash and concuss your way to the end of each level as quickly as you can.",
+            description = "A casual game with tons of short levels and a high skill ceiling. Dash and concuss your way to the end of each level as quickly as you can.",
             footer = "Graphic & Sound Design",
             tags = {"wip", "game"}
         }}
@@ -21,7 +21,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Terraria, 2026",
             url = "https://steamcommunity.com/sharedfiles/filedetails/?id=3660032479",
             image = "pointy128",
-            description = "A resource pack for Terraria.<br>Replaces NPC portraits with hand-drawn ones.<br>Does not replace pets.",
+            description = "A resource pack for Terraria that replaces NPC portraits with hand-drawn ones. Does not replace pets.",
             tags = {"respack"}
         }, {
             id = "wolf2wad",
@@ -29,7 +29,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Doom, 2025",
             url = "https://github.com/localins/wolf2wad",
             image = "wolf2wad128",
-            description = "Customizable command-line tool.<br>Converts Wolfenstein 3D maps into Doom WADs.",
+            description = "A customizable command-line tool that converts Wolfenstein 3D maps into Doom WADs.",
             tags = {"tool"}
         }, {
             id = "ntmai",
@@ -37,7 +37,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "UZDoom, 2020",
             url = "/ntmai",
             image = "ntmai128",
-            description = "A gameplay mod for UZDoom.<br>Makes Doom feel more like a Build Engine game by replicating quirks from Duke Nukem 3D, Blood and Shadow Warrior.",
+            description = "A gameplay mod for UZDoom that makes Doom feel more like a Build Engine game by replicating quirks from Duke Nukem 3D, Blood and Shadow Warrior.",
             footer = "<a href=\"https://www.doomworld.com/cacowards/2020/gameplay\">Doomworld 2020 Gameplay Mod Award</a>",
             tags = {"mod"}
         }},
@@ -83,13 +83,13 @@ render("projects/_projects.html", "projects/index.html", {
         category = "tech",
 
         projects = {{
-            id = "nutpunch",
-            name = "NutPunch",
-            alt = "Schwungus, 2025",
-            url = "https://github.com/Schwungus/nutpunch",
-            image = "nutpunch128",
-            description = "UDP hole-punching and peer-to-peer networking library for plain C.",
-            footer = "Callbacks, Matchmaking & Optimizations",
+            id = "nutblast",
+            name = "NutBlast",
+            alt = "Schwungus, 2026",
+            url = "https://nutblast.schwung.us",
+            image = "nutblast128",
+            description = "WebRTC multiplayer library for C and C++.",
+            footer = "In collaboration with <a href=\"https://nonk.dev\">nonk</a>",
             tags = {"wip", "library"}
         }, {
             id = "caulk",
@@ -97,12 +97,18 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Schwungus, 2025",
             url = "https://github.com/Schwungus/caulk",
             image = "caulk128",
-            description = "Convenient Steamworks API wrapper for plain C, since there weren't any left.<br>Supports Steamworks SDK v1.62 and newer.",
+            description = "Convenient Steamworks API wrapper for plain C, since there weren't any left. Supports Steamworks SDK v1.62 and newer.",
             footer = "In collaboration with <a href=\"https://nonk.dev\">nonk</a>",
             tags = {"library"}
         }},
 
         misc = {{
+            name = "NutPunch",
+            alt = "Schwungus, 2025",
+            url = "https://nutpunch.schwung.us",
+            description = "UDP peer-to-peer multiplayer library for C",
+            tags = {"library"}
+        }, {
             name = "S_fixed",
             alt = "Schwungus, 2025",
             url = "https://github.com/Schwungus/S_fixed",
