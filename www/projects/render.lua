@@ -88,7 +88,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Schwungus, 2026",
             url = "https://nutblast.schwung.us",
             image = "nutblast128",
-            description = "WebRTC multiplayer library for C and C++.",
+            description = "A WebRTC multiplayer library for C and C++.",
             footer = "In collaboration with <a href=\"https://nonk.dev\">nonk</a>",
             tags = {"wip", "library"}
         }, {
@@ -97,7 +97,7 @@ render("projects/_projects.html", "projects/index.html", {
             alt = "Schwungus, 2025",
             url = "https://github.com/Schwungus/caulk",
             image = "caulk128",
-            description = "Convenient Steamworks API wrapper for plain C, since there weren't any left. Supports Steamworks SDK v1.62 and newer.",
+            description = "A convenient Steamworks API wrapper for plain C, since there weren't any left. Supports Steamworks SDK v1.62 and newer.",
             footer = "In collaboration with <a href=\"https://nonk.dev\">nonk</a>",
             tags = {"library"}
         }},
