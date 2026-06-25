@@ -132,6 +132,7 @@ main {
 footer {
     display: grid;
     grid-auto-flow: column;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     padding: 1em;
     margin-top: 1em;

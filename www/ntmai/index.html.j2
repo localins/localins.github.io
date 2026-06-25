@@ -26,10 +26,11 @@
 
     {% block head %}{% endblock head %}
 
+    {% if __prod %}
     <script defer src="https://umami.schwung.us/script.js"
         data-website-id="40a0ba16-61a8-407b-a876-1b42949e761c"></script>
+    {% endif %}
     <script defer src="/assets/js/modal.js"></script>
-    <script defer src="/assets/js/footer.js"></script>
 </head>
 
 <body>
@@ -131,7 +132,7 @@
             <div class="footer">
                 <div class="footer-left">All content &copy; respective owners.</div>
                 <div class="footer-center">Powered by <a href="/">Can't Sleep</a></div>
-                <div class="footer-right" id="last-updated"></div>
+                <div class="footer-right">Last updated: {{ last_updated }}</div>
             </div>
         </footer>
     </div>
